@@ -1,0 +1,30 @@
+const nombresTipos = {
+  bug: 'Bicho',
+  dark: 'Siniestro',
+  dragon: 'Dragon',
+  electric: 'Electrico',
+  fairy: 'Hada',
+  fighting: 'Lucha',
+  fire: 'Fuego',
+  flying: 'Volador',
+  ghost: 'Fantasma',
+  grass: 'Planta',
+  ground: 'Tierra',
+  ice: 'Hielo',
+  normal: 'Normal',
+  poison: 'Veneno',
+  psychic: 'Psiquico',
+  rock: 'Roca',
+  steel: 'Acero',
+  water: 'Agua',
+}
+
+function TipoPokemon({ tipo }) {
+  return (
+    <span className={`tipo tipo-${tipo}`}>
+      {nombresTipos[tipo] || tipo}
+    </span>
+  )
+}
+
+export default TipoPokemon

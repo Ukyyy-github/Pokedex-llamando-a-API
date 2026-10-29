@@ -1,0 +1,272 @@
+.pagina {
+  min-height: 100vh;
+}
+
+.encabezado {
+  padding: 28px 24px;
+  border-bottom: 8px solid #f4c542;
+  background: #d94343;
+  color: #fff;
+  text-align: center;
+}
+
+.encabezado h1 {
+  margin: 0 0 18px;
+  font-size: 40px;
+}
+
+.buscador {
+  display: block;
+  width: min(100%, 440px);
+  margin: 0 auto;
+  text-align: left;
+}
+
+.buscador > span {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.campo-busqueda {
+  width: 100%;
+  padding: 13px 15px;
+  border: 2px solid transparent;
+  border-radius: 6px;
+  background: #fff;
+  color: #252525;
+}
+
+.campo-busqueda:focus {
+  border-color: #f4c542;
+  outline: 2px solid #fff;
+}
+
+.contenido {
+  width: min(100% - 40px, 1100px);
+  margin: 32px auto;
+}
+
+.numero {
+  color: #777;
+  font-size: 13px;
+}
+
+.rejilla {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+.tarjeta {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  align-items: center;
+  padding: 14px;
+  border: 1px solid #e4e1dc;
+  border-radius: 8px;
+  background: #fff;
+  color: #292929;
+  cursor: pointer;
+  text-align: center;
+}
+
+.tarjeta:hover {
+  border-color: #d94343;
+  transform: translateY(-2px);
+}
+
+.nombre-pokemon {
+  font-size: 18px;
+  font-weight: bold;
+  text-transform: capitalize;
+}
+
+.imagen-tarjeta,
+.imagen-modal {
+  display: block;
+  object-fit: contain;
+}
+
+.imagen-tarjeta {
+  width: 100%;
+  height: 130px;
+  margin: 8px auto;
+}
+
+.tipos {
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+}
+
+.tipo {
+  padding: 4px 9px;
+  border-radius: 4px;
+  background: #e7e7e7;
+  color: #333;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.tipo-fire { background: #f7c7a8; }
+.tipo-water { background: #b9d9f4; }
+.tipo-grass { background: #c9e8b6; }
+.tipo-electric { background: #f6e58d; }
+.tipo-bug { background: #d9e7a5; }
+.tipo-poison { background: #dec2e8; }
+.tipo-normal { background: #e1dfd4; }
+.tipo-flying { background: #ced9f3; }
+.tipo-ground { background: #e8d0a6; }
+.tipo-fairy { background: #f3c9df; }
+.tipo-fighting { background: #edb5aa; }
+.tipo-psychic { background: #f2bed0; }
+.tipo-rock { background: #d9d0ae; }
+.tipo-ghost { background: #c9c4e3; }
+.tipo-ice { background: #c7e9e9; }
+.tipo-dragon { background: #c6c4ed; }
+.tipo-dark { background: #c9c4c0; }
+.tipo-steel { background: #d1d8dc; }
+
+.mensaje {
+  padding: 32px 12px;
+  text-align: center;
+}
+
+.error {
+  color: #a52e2e;
+}
+
+.paginacion {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  margin: 28px 0;
+}
+
+.boton,
+.cerrar {
+  padding: 9px 14px;
+  border: 0;
+  border-radius: 5px;
+  background: #d94343;
+  color: #fff;
+  cursor: pointer;
+}
+
+.boton:disabled {
+  background: #c9c5c0;
+  cursor: not-allowed;
+}
+
+.fondo-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 1;
+  display: grid;
+  place-items: center;
+  padding: 16px;
+  background: rgb(24 24 24 / 65%);
+}
+
+.modal {
+  position: relative;
+  width: min(100%, 420px);
+  max-height: 90vh;
+  overflow: auto;
+  padding: 24px;
+  border-radius: 8px;
+  background: #fff;
+}
+
+.modal h2 {
+  margin: 4px 0 0;
+  text-align: center;
+  text-transform: capitalize;
+}
+
+.cerrar {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  padding: 2px 9px;
+  background: #eee;
+  color: #333;
+  font-size: 24px;
+}
+
+.imagen-modal {
+  width: 180px;
+  height: 180px;
+  margin: 8px auto;
+}
+
+.medidas {
+  margin: 16px 0;
+  text-align: center;
+}
+
+.medidas span {
+  padding: 0 8px;
+  color: #999;
+}
+
+.titulo-estadisticas {
+  margin: 18px 0 10px;
+  font-size: 16px;
+}
+
+.estadistica {
+  display: grid;
+  grid-template-columns: 1fr 30px;
+  gap: 4px 10px;
+  margin: 9px 0;
+  font-size: 13px;
+  text-transform: capitalize;
+}
+
+.estadistica strong {
+  text-align: right;
+}
+
+.barra {
+  grid-column: 1 / -1;
+  height: 7px;
+  overflow: hidden;
+  border-radius: 5px;
+  background: #e8e5e0;
+}
+
+.barra span {
+  display: block;
+  height: 100%;
+  border-radius: inherit;
+  background: #72b65a;
+}
+
+@media (max-width: 480px) {
+  .encabezado {
+    padding: 36px 20px 30px;
+  }
+
+  .contenido {
+    width: calc(100% - 28px);
+    margin-top: 24px;
+  }
+
+  .rejilla {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+
+  .tarjeta {
+    padding: 10px;
+  }
+
+  .imagen-tarjeta {
+    height: 105px;
+  }
+}
